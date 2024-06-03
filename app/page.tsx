@@ -1,6 +1,11 @@
-import Image from "next/image";
+import { auth } from "@/auth";
+import LoginForm from "@/components/LoginForm";
+import { SignIn } from "@/components/SignInButton";
 
-export default function Home() {
+export default async function Home() {
+  const session = await auth();
+  console.log(session);
+
   return (
     <main className="flex flex-col justify-center w-full h-screen p-20 gap-10">
       <h1 className="text-6xl uppercase font-bold">Utopia</h1>
@@ -12,6 +17,9 @@ export default function Home() {
       <a href="mailto:carlwicker@gmail.com" className="text-2xl underline">
         carlwicker@gmail.com
       </a>
+      {/* <p>Welcome {session}!</p> */}
+      <SignIn />
+      <LoginForm />
     </main>
   );
 }
