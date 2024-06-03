@@ -17,9 +17,8 @@ export default async function Home() {
       <a href="mailto:carlwicker@gmail.com" className="text-2xl underline">
         carlwicker@gmail.com
       </a>
-      {/* <p>Welcome {session}!</p> */}
+      <p>Welcome {session?.user?.email}! You are logged in.</p>
       <SignIn />
-      <LoginForm />
     </main>
   );
 }

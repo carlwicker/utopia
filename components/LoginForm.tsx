@@ -23,7 +23,7 @@ function LoginForm() {
           id="email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
-          className="mt-1 p-2 border border-gray-300 rounded"
+          className="mt-1 p-2 border border-gray-300 rounded text-black"
           required
         />
       </label>
@@ -34,7 +34,7 @@ function LoginForm() {
           id="password"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
-          className="mt-1 p-2 border border-gray-300 rounded"
+          className="mt-1 p-2 border border-gray-300 rounded text-black"
           required
         />
       </label>
