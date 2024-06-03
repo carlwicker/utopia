@@ -1,7 +1,5 @@
 import { auth } from "@/auth";
-import LoginForm from "@/components/LoginForm";
 import { SignIn } from "@/components/SignInButton";
-import Image from "next/image";
 
 export default async function Home() {
   const session = await auth();
@@ -10,31 +8,28 @@ export default async function Home() {
   return (
     <main className="flex flex-col justify-center w-full h-screen p-20 gap-10">
       <h1 className="text-6xl uppercase font-bold">Utopia//Engine</h1>
-      <p className="text-2xl">
+      <p className="text-4xl">
         Utopia represents a pioneering venture in AI-facilitated content
         generation, meticulously crafted to sculpt an infinitely vast and
         dynamic open universe.
       </p>
-      <a href="mailto:carlwicker@gmail.com" className="text-2xl underline">
-        carlwicker@gmail.com
-      </a>
+      <p className="text-2xl">
+        Utopia is a massive sandbox set in the year 2224, depicting a dystopian
+        futuristic universe. This expansive, AI-driven world-building experiment
+        delves into a bleak future, combining advanced content generation
+        algorithms with intricate narrative design. Within this intricate and
+        open-ended universe, players navigate a richly detailed environment
+        where societal decay, technological advancements, and survival
+        challenges converge, creating a deeply immersive and continually
+        evolving experience.
+      </p>
 
       {!session ? (
         <SignIn />
       ) : (
-        <div className="flex flex-col gap-5">
-          <Image
-            src={session?.user?.image}
-            alt={session?.user?.name}
-            width={100}
-            height={100}
-            className="rounded-full"
-          />
-          <p>Welcome {session?.user?.email}! You are logged in.</p>
-          <button className="bg-blue-400 p-5 rounded text-white max-w-min">
-            Enter
-          </button>
-        </div>
+        <button className="bg-blue-400 p-5 rounded text-white max-w-min">
+          Enter
+        </button>
       )}
     </main>
   );
