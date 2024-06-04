@@ -1,5 +1,6 @@
 import { auth } from "@/auth";
 import { SignIn } from "@/components/SignInButton";
+import Link from "next/link";
 
 export default async function Home() {
   const session = await auth();
@@ -27,9 +28,12 @@ export default async function Home() {
       {!session ? (
         <SignIn />
       ) : (
-        <button className="bg-blue-400 p-5 rounded text-white max-w-min">
+        <Link
+          href="/engine"
+          className="bg-blue-400 p-5 rounded text-white max-w-min"
+        >
           Enter
-        </button>
+        </Link>
       )}
     </main>
   );
