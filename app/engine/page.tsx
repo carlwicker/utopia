@@ -1,8 +1,10 @@
 import Image from "next/image";
 import { auth } from "@/auth";
+import { character } from "@/data/character";
 
 export default async function EngineHome() {
   const session = await auth();
+
   console.log(session);
 
   return (
@@ -14,8 +16,11 @@ export default async function EngineHome() {
           width={100}
           height={100}
           className="rounded-full"
+          priority
         />
-        <p className="text-center font-semibold">{session?.user?.name ?? ""}</p>
+        <p className="text-center font-semibold">
+          {character.basicInfo.name ?? ""}
+        </p>
       </div>
     </main>
   );
