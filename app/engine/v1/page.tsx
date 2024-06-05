@@ -17,7 +17,7 @@ export default function StoryComponent() {
     setCurrentSceneKey(nextSceneKey);
   };
 
-  const currentScene = story[currentSceneKey];
+  let currentScene: any = story[currentSceneKey];
 
   return (
     <div>

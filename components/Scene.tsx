@@ -5,7 +5,7 @@ const Scene = ({ scene, onChoice }: any) => {
     <div className="p-4 max-w-lg mx-auto">
       <p className="text-lg mb-4">{scene.text}</p>
       <div>
-        {scene.choices.map((choice, index) => (
+        {scene.choices.map((choice: any, index: any) => (
           <button
             key={index}
             onClick={() => onChoice(choice.nextScene)}
