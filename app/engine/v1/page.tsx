@@ -9,11 +9,9 @@ export default function StoryComponent() {
     return localStorage.getItem("currentScene") || "start";
   });
 
-  useEffect(() => {
-    if (typeof window !== "undefined") {
-      localStorage.setItem("currentScene", currentSceneKey);
-    }
-  }, [currentSceneKey]);
+  // useEffect(() => {
+  //   localStorage.setItem("currentScene", currentSceneKey);
+  // }, [currentSceneKey]);
 
   const handleChoice = (nextSceneKey: any) => {
     setCurrentSceneKey(nextSceneKey);
