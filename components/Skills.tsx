@@ -16,7 +16,7 @@ export default function Skills({ playerDetails }: any) {
             />
           ));
         } else {
-          return <div>{skill}</div>;
+          return <div key={skill}>{skill}</div>;
         }
       })}
     </div>
