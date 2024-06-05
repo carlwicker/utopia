@@ -43,9 +43,9 @@ export default function ChartDoughnut({
     <div className="flex flex-col items-center">
       <div className="flex flex-col items-center justify-center h-[50px] w-[50px] container">
         <Doughnut data={data} options={options} />
-        <p className="absolute text-[#666] text-2xl font-bold">{value}</p>
+        <p className="absolute text-[#999] text-2xl font-bold">{value}</p>
       </div>
-      <p className="uppercase text-[#333] text-sm">{attribute}</p>
+      <p className="uppercase text-[#999] text-sm">{attribute}</p>
     </div>
   );
 }

@@ -1,10 +1,10 @@
 import ChartDoughnut from "./ChartDoughnut";
 
-export default function Skills({ character }: any) {
-  const skills = character.skills;
+export default function Skills({ playerDetails }: any) {
+  const skills = playerDetails.skills;
 
   return (
-    <div className="flex gap-10">
+    <div className="grid grid-cols-3 gap-10">
       {Object.entries(skills).map(([skill, value]) => {
         if (typeof value === "object") {
           return Object.entries(value as any).map(([subSkill, subValue]) => (
@@ -16,14 +16,7 @@ export default function Skills({ character }: any) {
             />
           ));
         } else {
-          return (
-            <ChartDoughnut
-              key={skill}
-              value={value as number}
-              attribute={skill}
-              skill={skill}
-            />
-          );
+          return <div>{skill}</div>;
         }
       })}
     </div>

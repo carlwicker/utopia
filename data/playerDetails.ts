@@ -1,15 +1,16 @@
-export const character = {
+export const playerDetails = {
   basicInfo: {
     name: "Carl Wicker",
     age: "48",
     gender: "Male",
     faction: "string",
     occupation: "Prompt Engineer",
+    bodyType: "Average",
     location: {
       planet: "Earth",
-      city: "Brighton",
       long: "0",
       lat: "0",
+      city: "Brighton",
     },
   },
   attributes: {

@@ -7,7 +7,7 @@ export default async function Home() {
   console.log(session);
 
   return (
-    <main className="flex flex-col justify-center w-full h-screen p-20 gap-10">
+    <main className="container mx-auto flex flex-col justify-center w-full h-screen p-10 gap-20">
       <h1 className="text-6xl uppercase font-bold">Utopia//Engine</h1>
       <p className="text-4xl">
         Utopia represents a pioneering venture in AI-facilitated content
